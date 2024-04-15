@@ -133,7 +133,7 @@
                 the app. <br />
                 The integrated testing features allow for a streamlined .
               </p>
-              <button class="btn bg-green border-0 font-bold">
+              <button id="buy-tickets-btn" class="btn bg-green border-0 font-bold">
                 Buy Tickets
               </button>
             </div>
@@ -327,7 +327,7 @@
               </div>
 
               <!-- All Seats Field -->
-              <div class="font-inter">
+              <div id="all-seat-container" class="font-inter">
                 <!-- Seat A -->
                 <div class="grid grid-cols-5 gap-10 text-center mt-5">
                   <div class="flex justify-center items-center">
@@ -468,7 +468,7 @@
                     placeholder="Have any coupon?"
                   />
                   <div>
-                    <button onclick="promoCodeApply()" class="btn bg-green text-white font-bold">
+                    <button onclick="promoCodeApply()" id="applyButton" class="btn bg-green text-white font-bold" disabled>
                       Apply
                     </button>
                   </div>
@@ -489,6 +489,7 @@
                   <span class="label-text font-bold">Passenger Name*</span>
                 </div>
                 <input
+                  id="passenger-name"
                   type="text"
                   placeholder="Enter Your Name"
                   class="input input-bordered w-full"
@@ -499,6 +500,7 @@
                   <span class="label-text font-bold">Phone Number*</span>
                 </div>
                 <input
+                  id="phone-number"
                   type="number"
                   placeholder="Enter your phone number"
                   class="input input-bordered w-full"
@@ -509,6 +511,7 @@
                   <span class="label-text font-bold">Email ID*</span>
                 </div>
                 <input
+                  id="email-id"
                   type="email"
                   placeholder="Enter your email id"
                   class="input input-bordered w-full"
@@ -516,11 +519,14 @@
               </label>
               <div class="w-full mt-6">
                 <button
+                  id="next-btn"
                   class="btn btn-wide w-full bg-green font-bold text-white"
+                  disabled
                 >
                   Next
                 </button>
               </div>
+              <!-- modal -->
               <div class="flex justify-around mt-4 font-inter">
                 <p class="underline text-gray">Terms and Conditions</p>
                 <p class="underline text-gray">Cancellation Policy</p>
