@@ -185,7 +185,7 @@
         </h1>
         <div class="flex flex-col md:flex-row lg:flex-row gap-6 mx-auto">
           <div
-            class="flex h-56 justify-center items-center w-full md:w-1/2 lg:w-1/2 bg-[#FFBF0F] rounded-3xl"
+            class="flex h-56 justify-evenly items-center w-full md:w-1/2 lg:w-1/2 bg-[#FFBF0F] rounded-3xl"
           >
             <div class="mr-18 md:mr-36 lg:mr-36">
               <h1 class="font-extrabold text-2xl">15% OFF</h1>
@@ -201,7 +201,7 @@
             </div>
           </div>
           <div
-            class="flex h-56 justify-center items-center w-full md:w-1/2 lg:w-1/2 bg-[#F78C9C] rounded-3xl"
+            class="flex h-56 justify-evenly items-center w-full md:w-1/2 lg:w-1/2 bg-[#F78C9C] rounded-3xl"
           >
             <div class="mr-18 md:mr-36 lg:mr-36">
               <h1 class="font-extrabold text-2xl">20% OFF</h1>
@@ -227,7 +227,7 @@
       </section>
 
       <!-- Functional section start -->
-      <section class="border-t-2 border-green rounded-2xl bg-[#F7F8F8]">
+      <section class="border-t-2 border-green rounded-2xl bg-[#F7F8F8] pb-10">
         <div class="container mx-auto">
           <!-- F.Heading  -->
           <div class="text-center mt-10">
@@ -242,9 +242,9 @@
           <!-- F.Info -->
           <div class="flex flex-col md:flex-row lg:flex-row justify-between items-center w-full bg-white rounded-2xl mt-10">
             <div class="w-4/5">
-              <div class="flex justify-between items-center mb-8">
-                <div class="flex item-center gap-4 ml-10">
-                  <div>
+              <div class="flex flex-col md:flex-row lg:flex-row justify-between items-center mb-8 pt-5 md:pt-0 lg:pt-0">
+                <div class="flex flex-col md:flex-row lg:flex-row item-center gap-4 ml-10">
+                  <div class="flex justify-center items-center">
                     <img src="./images/bus-logo.png" alt="" />
                   </div>
                   <div>
@@ -255,7 +255,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex justify-center items-center gap-3 text-green font-bold bg-greenish p-3 rounded-lg"
+                  class="flex justify-center items-center gap-3 text-green font-bold bg-greenish p-3 rounded-lg mt-6 md:mt-0 lg:mt-0"
                 >
                   <img src="./images/seat-green.png" alt="" />
                   <span id="seats-left">40</span>
@@ -293,7 +293,7 @@
             <div class="hidden md:block lg:block">
               <img class="h-96" src="./images/info-devider.png" alt="" />
             </div>
-            <div class="w-1/5 flex flex-col justify-center items-center">
+            <div class="w-full md:w-1/5 lg:w-1/5 flex flex-col justify-center items-center">
               <img src="./images/fare.png" alt="" />
               <h1 id="five-hundred-fifty" class="font-extrabold text-xl">550 Taka</h1>
               <p>Per Seat</p>
@@ -433,7 +433,7 @@
             <div class="border-2 border-dashed border-gray mx-8 hidden md:block lg:block"></div>
 
             <!-- Functional Area -->
-            <div class="w-full md:w-1/3 lg:w-1/3">
+            <div class="w-full md:w-1/3 lg:w-1/3 mt-5 md:mt-0 lg:mt-0">
               <h1 class="font-bold text-xl font-raleway">Select Your Seat</h1>
               <hr class="border-dashed my-4 text-gray" />
               <!-- Listed info area -->
@@ -519,6 +519,7 @@
               </label>
               <div class="w-full mt-6">
                 <button
+                  onclick="my_modal_5.showModal()"
                   id="next-btn"
                   class="btn btn-wide w-full bg-green font-bold text-white"
                   disabled
@@ -527,6 +528,27 @@
                 </button>
               </div>
               <!-- modal -->
+              <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                  <div class="flex justify-center mt-8">
+                    <img src="./images/success.png" alt="">
+                  </div>
+                  <h3 class="font-bold text-lg text-[#27AE60] text-center mt-4">SUCCESS</h3>
+                  <h4 class="font-bold mt-3 text-center">Thank you for Booking Our Bus Seats. 
+                    We are working hard to find the best service and deals for you.</h4>
+                  <p class="py-4 text-center">Shortly you will find a confirmation in your email.</p>
+                  <div class="flex justify-center">
+                    <button id="continue" class="btn bg-[#27AE60] px-12 py-3 rounded-3xl font-bold text-white">Continue</button>
+                  </div>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+
               <div class="flex justify-around mt-4 font-inter">
                 <p class="underline text-gray">Terms and Conditions</p>
                 <p class="underline text-gray">Cancellation Policy</p>

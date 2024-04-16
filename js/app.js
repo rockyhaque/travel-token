@@ -56,9 +56,10 @@ function seatBtnFunc(e) {
 
   selectedSeat.appendChild(li);
 
-  // if(selectCount > 1){
-  //     lineBreak.classList.remove("hidden")
-  // }
+  if(selectCount > 0){
+      lineBreak.classList.remove("hidden");
+      lineBreak.classList.add("block")
+  }
 
   const convertedTotalPrice = parseInt(totalPriceElement.innerText);
   const totalSum = convertedTotalPrice + parseInt(550);
