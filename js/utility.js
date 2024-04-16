@@ -1,5 +1,5 @@
 document.getElementById("buy-tickets-btn").addEventListener("click", function() {
-    const allSeatContainer = document.getElementById("all-seat-container");
+    const allSeatContainer = document.getElementById("booking-section");
     // Perform actions using allSeatContainer
     allSeatContainer.scrollIntoView({ behavior: 'smooth' });
 });

@@ -95,11 +95,10 @@ function promoCodeApply() {
 
     couponContainer.classList.add("hidden");
 
-    console.log(totalPriceElement);
     grandTotalElement.innerText = totalPriceElement.innerText - discount;
   }
 
-  if (couponCode === "Couple20") {
+  if (couponCode === "Couple 20") {
     discount = totalPriceElement.innerText * 0.2;
 
     const li = document.createElement("li");
@@ -108,11 +107,12 @@ function promoCodeApply() {
     li.appendChild(p);
     discountContainer.appendChild(li);
 
-    console.log(totalPriceElement);
+    couponContainer.classList.add("hidden");
+
     grandTotalElement.innerText = totalPriceElement.innerText - discount;
   }
 
-  if (couponCode !== "NEW15" && couponCode !== "Couple20") {
+  if (couponCode !== "NEW15" && couponCode !== "Couple 20") {
     alert("Oops! Invalid Coupon Code.");
     couponCodeInput.value = "";
   }
